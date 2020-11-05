@@ -18,5 +18,13 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shadowpants18/mcpehelper-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shadowpants18/mcpehelper-server/issues"
+  },
+  "homepage": "https://github.com/shadowpants18/mcpehelper-server#readme"
 }
