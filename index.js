@@ -2,10 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const StudentVue = require('studentvue.js')
 const app = express();
-
+app.use(cors())
 const url = 'https://md-mcps-psv.edupoint.com/';
-
-let allowedOrigins = ['http://localhost:5501','https://mcpsvuehelper.vercel.app/']
 
 app.enable('trust proxy');
 
@@ -15,7 +13,7 @@ app.options('*', function (req, res) {
     res.setHeader("Access-Control-Allow-Headers", "*");
     res.end();
   });
-app.use(cors())
+
 app.options('*', cors())
 
 app.use(function(req, res, next) {

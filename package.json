@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "12.18.3"
-    },
+    "node": "12.x"
+  },
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
@@ -16,7 +16,6 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "morgan": "^1.10.0",
     "studentvue.js": "^0.1.1"
   },
   "devDependencies": {
