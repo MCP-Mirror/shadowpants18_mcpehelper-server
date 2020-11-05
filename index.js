@@ -5,22 +5,13 @@ const app = express();
 app.use(cors())
 const url = 'https://md-mcps-psv.edupoint.com/';
 
-app.enable('trust proxy');
-
 app.options('*', function (req, res) {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader('Access-Control-Allow-Methods', '*');
     res.setHeader("Access-Control-Allow-Headers", "*");
     res.end();
   });
-
 app.options('*', cors())
-
-app.use(function(req, res, next) {
-res.header("Access-Control-Allow-Origin", "*");
-res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-next();
-});
 app.use(express.json());
 
 app.post('/done', async (req, res)=>{
