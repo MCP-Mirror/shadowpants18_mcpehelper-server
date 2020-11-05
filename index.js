@@ -9,8 +9,6 @@ let allowedOrigins = allowedOrigins = ['http://localhost:5501','https://mcpsvueh
 
 app.enable('trust proxy');
 
-
-
 app.options('*', function (req, res) {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader('Access-Control-Allow-Methods', '*');
