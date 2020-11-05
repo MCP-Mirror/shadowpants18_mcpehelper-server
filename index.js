@@ -5,7 +5,7 @@ const app = express();
 
 const url = 'https://md-mcps-psv.edupoint.com/';
 
-let allowedOrigins = allowedOrigins = ['http://localhost:5501','https://mcpsvuehelper.vercel.app/']
+let allowedOrigins = ['http://localhost:5501','https://mcpsvuehelper.vercel.app/']
 
 app.enable('trust proxy');
 
