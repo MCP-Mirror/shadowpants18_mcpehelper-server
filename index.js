@@ -16,14 +16,10 @@ app.options('*', cors())
 app.use(express.json());
 
 app.get('/', (req, res)=>{
-    res.send('Sup')
-})
-
-app.get('/done', (req, res)=>{
     res.send('Done')
 })
 
-app.post('/done', async (req, res)=>{
+app.post('/', async (req, res)=>{
 
     StudentVue.login(url, req.body.name.toString(), req.body.password.toString()).then(client =>{
         client.getGradebook().then(grades => {
