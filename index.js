@@ -14,6 +14,10 @@ app.options('*', function (req, res) {
 app.options('*', cors())
 app.use(express.json());
 
+app.get('/', (req, res)=>{
+    res.send('Sup')
+})
+
 app.post('/done', async (req, res)=>{
 
     StudentVue.login(url, req.body.name.toString(), req.body.password.toString()).then(client =>{
