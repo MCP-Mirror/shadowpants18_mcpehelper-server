@@ -18,6 +18,10 @@ app.get('/', (req, res)=>{
     res.send('Sup')
 })
 
+app.get('/done', (req, res)=>{
+    res.send('Done')
+})
+
 app.post('/done', async (req, res)=>{
 
     StudentVue.login(url, req.body.name.toString(), req.body.password.toString()).then(client =>{
