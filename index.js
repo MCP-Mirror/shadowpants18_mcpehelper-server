@@ -6,9 +6,10 @@ app.use(cors())
 const url = 'https://md-mcps-psv.edupoint.com/';
 
 app.options('*', function (req, res) {
-    res.setHeader("Access-Control-Allow-Origin", "http://mcpsvuehelper.surge.sh/, http://mcpsvuehelper.surge.sh");
-    res.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader('Access-Control-Allow-Methods', '*');
     res.setHeader("Access-Control-Allow-Headers", "*");
+    res.setHeader("Access-Control-Allow-Methods", "Content-Type");
     res.end();
   });
 app.options('*', cors())
