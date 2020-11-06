@@ -16,10 +16,14 @@ app.options('*', cors())
 app.use(express.json());
 
 app.get('/', (req, res)=>{
+    res.send('main')
+})
+
+app.get('/done', (req, res)=>{
     res.send('Done')
 })
 
-app.post('/', async (req, res)=>{
+app.post('/done', async (req, res)=>{
 
     StudentVue.login(url, req.body.name.toString(), req.body.password.toString()).then(client =>{
         client.getGradebook().then(grades => {
@@ -39,5 +43,5 @@ app.post('/', async (req, res)=>{
 })
 
 app.listen(process.env.PORT || 5000, ()=>{
-    console.log('listening on http://localhost:5000');
+    console.log(process.env.PORT);
 });
