@@ -19,7 +19,7 @@ app.get('/done', (req, res)=>{
 app.post('/done', async (req, res)=>{
 
     StudentVue.login(url, req.body.name.toString(), req.body.password.toString()).then(client =>{
-        client.getGradebook([3]).then(grades => {
+        client.getGradebook([5]).then(grades => {
             let parsed = JSON.parse(grades)
             if(parsed.RT_ERROR){
                 res.json({
